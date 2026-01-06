@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
 import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
@@ -44,10 +45,11 @@ export function Header() {
                     />
                     <span className="text-lg font-bold tracking-tight">WayMaker</span>
                 </Link>
-                <nav className="flex items-center gap-4">
-                    <Link href="#services" className="text-sm font-medium hover:text-primary transition-colors hidden sm:block">
+                <nav className="flex items-center gap-2">
+                    <Link href="#services" className="text-sm font-medium hover:text-primary transition-colors hidden sm:block mr-2">
                         Services
                     </Link>
+                    <ThemeToggle />
                     <Link href="#contact">
                         <Button size="sm" variant={scrolled ? "default" : "outline"} className="rounded-full">
                             Contact
