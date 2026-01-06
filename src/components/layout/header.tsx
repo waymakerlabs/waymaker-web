@@ -23,25 +23,26 @@ export function Header() {
             scrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent py-4"
         )}>
             <div className="container mx-auto px-4 flex items-center justify-between h-16">
-                <Link href="/" className="relative h-9 w-auto flex items-center">
+                <Link href="/" className="flex items-center gap-2">
                     {/* Light mode logo */}
                     <Image
-                        src="/images/waymaker_logo_with_text.svg"
+                        src="/images/waymaker_logo_no_text.svg"
                         alt="WayMaker"
-                        width={140}
+                        width={36}
                         height={36}
-                        className="h-9 w-auto dark:hidden transition-opacity duration-300"
+                        className="h-8 w-auto dark:hidden"
                         priority
                     />
                     {/* Dark mode logo (inverted) */}
                     <Image
-                        src="/images/waymaker_with_text_inverted.svg"
+                        src="/images/waymaker_no_text_inverted.svg"
                         alt="WayMaker"
-                        width={140}
+                        width={36}
                         height={36}
-                        className="h-9 w-auto hidden dark:block transition-opacity duration-300"
+                        className="h-8 w-auto hidden dark:block"
                         priority
                     />
+                    <span className="text-lg font-bold tracking-tight">WayMaker</span>
                 </Link>
                 <nav className="flex items-center gap-4">
                     <Link href="#services" className="text-sm font-medium hover:text-primary transition-colors hidden sm:block">
