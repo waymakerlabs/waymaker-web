@@ -5,13 +5,13 @@ import { Services } from "@/components/sections/services"
 import { Contact } from "@/components/sections/contact"
 
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-background">
-      <Header />
-      <Hero />
-      <Services />
-      <Contact />
-      <Footer />
-    </main>
-  )
+    return (
+        <main className="min-h-screen bg-background">
+            <Header />
+            <Hero />
+            <Services />
+            <Contact />
+            <Footer />
+        </main>
+    )
 }

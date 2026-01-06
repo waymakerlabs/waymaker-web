@@ -1,14 +1,17 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
+import { LanguageSelector } from "@/components/ui/language-selector"
 import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 export function Header() {
     const [scrolled, setScrolled] = useState(false)
+    const t = useTranslations('nav')
 
     useEffect(() => {
         const handleScroll = () => {
@@ -47,13 +50,14 @@ export function Header() {
                 </Link>
                 <nav className="flex items-center gap-4">
                     <Link href="#services" className="text-sm font-medium hover:text-primary transition-colors hidden sm:block">
-                        Services
+                        {t('services')}
                     </Link>
                     <Link href="#contact">
                         <Button size="sm" variant={scrolled ? "default" : "outline"} className="rounded-full">
-                            Contact
+                            {t('contact')}
                         </Button>
                     </Link>
+                    <LanguageSelector />
                     <ThemeToggle />
                 </nav>
             </div>
