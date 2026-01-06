@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Rules
+
+- **버전 관리**: 작업 완료 후 커밋할 때마다 `package.json`의 패치 버전을 1씩 올린다 (예: 0.2.0 → 0.2.1)
+
 ## Build & Development Commands
 
 ```bash
