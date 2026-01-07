@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
     try {
-        const { name, email, message } = await request.json();
+        const { name, email, message, source = 'Main' } = await request.json();
 
         // 간단한 유효성 검사
         if (!name || !email || !message) {
@@ -20,9 +20,10 @@ export async function POST(request: NextRequest) {
             from: 'WayMaker Contact <onboarding@resend.dev>',
             to: process.env.CONTACT_EMAIL || 'waymakerlabs@gmail.com',
             replyTo: email,
-            subject: `[WayMaker] ${name}님의 문의`,
+            subject: `[WayMaker] [${source}] ${name}님의 문의`,
             html: `
                 <h2>새로운 문의가 도착했습니다</h2>
+                <p><strong>출처:</strong> ${source}</p>
                 <p><strong>이름:</strong> ${name}</p>
                 <p><strong>이메일:</strong> ${email}</p>
                 <p><strong>메시지:</strong></p>

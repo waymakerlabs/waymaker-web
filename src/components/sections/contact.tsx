@@ -6,7 +6,11 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal"
 import { Send, Loader2 } from "lucide-react"
 import { useState } from "react"
 
-export function Contact() {
+interface ContactProps {
+    source?: string
+}
+
+export function Contact({ source = 'Main' }: ContactProps) {
     const t = useTranslations('contact')
     const [formData, setFormData] = useState({ name: '', email: '', message: '' })
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -21,7 +25,7 @@ export function Contact() {
             const res = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({ ...formData, source }),
             })
 
             if (res.ok) {
