@@ -1,7 +1,7 @@
 "use client"
 
 import { useLocale, useTranslations } from "next-intl"
-import { useRouter, usePathname } from "next/navigation"
+import { Link } from "@/i18n/navigation"
 import { Globe } from "lucide-react"
 import { Button } from "./button"
 import { useState, useRef, useEffect } from "react"
@@ -12,8 +12,6 @@ const locales = ['en', 'ko'] as const
 export function LanguageSelector() {
     const locale = useLocale()
     const t = useTranslations('language')
-    const router = useRouter()
-    const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
     const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -26,12 +24,6 @@ export function LanguageSelector() {
         document.addEventListener("mousedown", handleClickOutside)
         return () => document.removeEventListener("mousedown", handleClickOutside)
     }, [])
-
-    const switchLocale = (newLocale: string) => {
-        const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/'
-        router.push(`/${newLocale}${pathWithoutLocale}`)
-        setIsOpen(false)
-    }
 
     return (
         <div className="relative" ref={dropdownRef}>
@@ -48,16 +40,18 @@ export function LanguageSelector() {
             {isOpen && (
                 <div className="absolute right-0 top-full mt-2 py-1 w-32 bg-background border rounded-lg shadow-lg z-50">
                     {locales.map((loc) => (
-                        <button
+                        <Link
                             key={loc}
-                            onClick={() => switchLocale(loc)}
+                            href="/"
+                            locale={loc}
+                            onClick={() => setIsOpen(false)}
                             className={cn(
-                                "w-full px-4 py-2 text-left text-sm hover:bg-muted transition-colors",
+                                "block w-full px-4 py-2 text-left text-sm hover:bg-muted transition-colors",
                                 locale === loc && "font-semibold text-primary"
                             )}
                         >
                             {t(loc)}
-                        </button>
+                        </Link>
                     ))}
                 </div>
             )}

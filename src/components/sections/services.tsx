@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
-import { Monitor, Cpu, Users, Layers, Zap, LucideIcon } from "lucide-react"
+import { Monitor, Cpu, Users, Layers, Zap, LucideIcon, Check } from "lucide-react"
 
 type ServiceKey = 'axConsulting' | 'aiApps' | 'fde' | 'custom' | 'appDev'
 
@@ -19,24 +19,51 @@ export function Services() {
 
     return (
         <section id="services" className="py-24 px-4 bg-muted/30">
-            <div className="max-w-5xl mx-auto space-y-32">
-                {serviceConfig.map((service, index) => (
-                    <ScrollReveal key={index} className="flex flex-col md:flex-row items-start gap-8 md:gap-16 group">
-                        <div className="flex-shrink-0 pt-2">
-                            <div className="p-4 rounded-2xl bg-secondary group-hover:bg-primary transition-colors duration-500">
-                                <service.icon className="w-10 h-10 text-primary group-hover:text-primary-foreground transition-colors duration-500" />
+            <div className="max-w-5xl mx-auto">
+                <ScrollReveal className="text-center mb-16">
+                    <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
+                        {t('sectionTitle')}
+                    </h2>
+                    <p className="text-lg md:text-xl text-muted-foreground">
+                        {t('sectionSubtitle')}
+                    </p>
+                </ScrollReveal>
+
+                <div className="space-y-24">
+                    {serviceConfig.map((service, index) => (
+                        <ScrollReveal
+                            key={index}
+                            className="flex flex-col md:flex-row items-start gap-8 md:gap-16 group"
+                            delay={index * 0.1}
+                        >
+                            <div className="flex-shrink-0 pt-2">
+                                <div className="p-4 rounded-2xl bg-secondary group-hover:bg-primary transition-colors duration-500">
+                                    <service.icon className="w-10 h-10 text-primary group-hover:text-primary-foreground transition-colors duration-500" />
+                                </div>
                             </div>
-                        </div>
-                        <div className="space-y-4">
-                            <h3 className="text-3xl md:text-5xl font-bold tracking-tight">
-                                {t(`${service.key}.title`)}
-                            </h3>
-                            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                                {t(`${service.key}.description`)}
-                            </p>
-                        </div>
-                    </ScrollReveal>
-                ))}
+                            <div className="space-y-4 flex-1">
+                                <h3 className="text-3xl md:text-5xl font-bold tracking-tight">
+                                    {t(`${service.key}.title`)}
+                                </h3>
+                                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+                                    {t(`${service.key}.description`)}
+                                </p>
+                                <ul className="grid sm:grid-cols-2 gap-3 pt-4">
+                                    {[0, 1, 2, 3].map((featureIndex) => (
+                                        <li key={featureIndex} className="flex items-start gap-3">
+                                            <div className="p-1 rounded-full bg-primary/10 mt-0.5">
+                                                <Check className="w-3.5 h-3.5 text-primary" />
+                                            </div>
+                                            <span className="text-muted-foreground">
+                                                {t(`${service.key}.features.${featureIndex}`)}
+                                            </span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </ScrollReveal>
+                    ))}
+                </div>
             </div>
         </section>
     )

@@ -5,6 +5,8 @@
     },
     "nav": {
         "services": "Services",
+        "about": "About",
+        "process": "Process",
         "contact": "Contact"
     },
     "hero": {
@@ -13,32 +15,191 @@
         "exploreButton": "Explore Solutions",
         "contactButton": "Contact Us"
     },
+    "about": {
+        "badge": "Our Vision",
+        "heading": "We Make the Way",
+        "description": "Even when others see the impossible, we find a path forward. Where there seems to be a dead end, we open new possibilities through technology and creativity, helping you move ahead.",
+        "values": {
+            "innovation": {
+                "title": "Innovative Thinking",
+                "description": "We deliver creative solutions that go beyond conventional frameworks"
+            },
+            "execution": {
+                "title": "Rapid Execution",
+                "description": "Our speed in turning ideas into reality is our greatest strength"
+            },
+            "partnership": {
+                "title": "True Partnership",
+                "description": "We're not just vendors—we're partners who solve problems together"
+            }
+        }
+    },
     "services": {
+        "sectionTitle": "Services",
+        "sectionSubtitle": "We accompany you through every digital journey",
         "axConsulting": {
             "title": "AX Consulting",
-            "description": "App Experience Consulting. We dissect user interactions to build intuitive, engaging, and high-conversion digital experiences."
+            "description": "App Experience Consulting. We dissect user interactions to build intuitive, engaging, and high-conversion digital experiences.",
+            "features": [
+                "User journey analysis & UX improvement",
+                "Conversion rate optimization strategy",
+                "Competitor benchmarking analysis",
+                "Data-driven decision support"
+            ]
         },
         "aiApps": {
             "title": "AI Disposable Apps",
-            "description": "Rapid AI prototyping. We build focused, lightweight AI applications designed to solve specific problems instantly."
+            "description": "Rapid AI prototyping. We build focused, lightweight AI applications designed to solve specific problems instantly.",
+            "features": [
+                "Fast prototypes within 1-2 weeks",
+                "ChatGPT, Claude API integration",
+                "Custom AI workflow automation",
+                "Cost-effective solutions"
+            ]
         },
         "fde": {
             "title": "FDE Solutions",
-            "description": "Forward Deployed Engineering. Like Palantir's FDEs, our engineers embed with your team to solve critical AX and data problems on the ground."
+            "description": "Forward Deployed Engineering. Like Palantir's FDEs, our engineers embed with your team to solve critical AX and data problems on the ground.",
+            "features": [
+                "Embedded problem-solving with your team",
+                "Real-time technical support & mentoring",
+                "Internal capability building",
+                "Long-term partnership available"
+            ]
         },
         "custom": {
             "title": "Custom Solutions",
-            "description": "Tailored software for enterprises and individuals. From internal tools to customer-facing platforms, we craft the perfect fit."
+            "description": "Tailored software for enterprises and individuals. From internal tools to customer-facing platforms, we craft the perfect fit.",
+            "features": [
+                "Requirements-based custom design",
+                "Scalable architecture",
+                "Existing system integration",
+                "Ongoing maintenance support"
+            ]
         },
         "appDev": {
             "title": "App Development & Distribution",
-            "description": "End-to-end app lifecycle management. We build, deploy, and scale varied applications across global markets."
+            "description": "End-to-end app lifecycle management. We build, deploy, and scale varied applications across global markets.",
+            "features": [
+                "iOS, Android, Web app development",
+                "App store registration & management",
+                "Global market localization",
+                "Performance monitoring & optimization"
+            ]
         }
+    },
+    "process": {
+        "sectionTitle": "Process",
+        "sectionSubtitle": "A systematic 4-step approach to project success",
+        "steps": {
+            "discovery": {
+                "step": "01",
+                "title": "Discovery",
+                "description": "We deeply understand your problem. We identify business goals, current situation, and constraints to set the optimal direction."
+            },
+            "analysis": {
+                "step": "02",
+                "title": "Analysis & Design",
+                "description": "We design solutions based on gathered information. We select tech stack, configure architecture, and establish project timeline."
+            },
+            "development": {
+                "step": "03",
+                "title": "Development",
+                "description": "We develop rapidly using agile methodology. We adjust direction through regular feedback cycles."
+            },
+            "support": {
+                "step": "04",
+                "title": "Deploy & Support",
+                "description": "We deploy reliably and provide ongoing support. We respond quickly when issues arise."
+            }
+        }
+    },
+    "stats": {
+        "projects": {
+            "value": "50+",
+            "label": "Completed Projects"
+        },
+        "satisfaction": {
+            "value": "98%",
+            "label": "Client Satisfaction"
+        },
+        "response": {
+            "value": "24h",
+            "label": "Avg Response Time"
+        },
+        "technologies": {
+            "value": "20+",
+            "label": "Tech Stack"
+        }
+    },
+    "testimonials": {
+        "sectionTitle": "Testimonials",
+        "sectionSubtitle": "Stories from those we've worked with",
+        "items": [
+            {
+                "quote": "They implemented a feature I thought was impossible in just 2 weeks. I truly experienced what it means to 'make a way'.",
+                "author": "Minsu Kim",
+                "role": "Startup CEO",
+                "company": "Tech Startup"
+            },
+            {
+                "quote": "We struggled with a technical issue for 6 months, and WayMaker provided a clear solution. Thanks to them, our project got back on track.",
+                "author": "Jihyun Lee",
+                "role": "IT Team Lead",
+                "company": "Mid-size Enterprise"
+            },
+            {
+                "quote": "As a solo developer, I felt limited. Through the FDE service, I learned so much in a short time. Now I can solve many more problems on my own.",
+                "author": "Junyoung Park",
+                "role": "Freelance Developer",
+                "company": ""
+            }
+        ]
+    },
+    "faq": {
+        "sectionTitle": "FAQ",
+        "sectionSubtitle": "Have questions?",
+        "items": [
+            {
+                "question": "How is pricing determined?",
+                "answer": "It depends on the project's scope and complexity. After an initial consultation to understand your requirements, we provide a transparent quote. Small projects use fixed pricing, while larger projects use milestone-based billing."
+            },
+            {
+                "question": "How long does development take?",
+                "answer": "It varies by project: AI disposable apps take 1-2 weeks, typical web/app development 4-8 weeks, and large custom solutions 2-4 months. We'll provide an accurate timeline after consultation."
+            },
+            {
+                "question": "What tech stack do you use?",
+                "answer": "We use modern tech stacks including React, Next.js, Flutter, Python, and Node.js. For AI solutions, we integrate OpenAI and Anthropic APIs. We select the optimal technology for each project's requirements."
+            },
+            {
+                "question": "Do you provide maintenance support?",
+                "answer": "Yes, we offer ongoing maintenance contracts after project completion. We support bug fixes, feature additions, and performance improvements, with 24-hour response for urgent issues."
+            },
+            {
+                "question": "Can you handle small projects?",
+                "answer": "Absolutely. From simple landing pages to complex enterprise systems, we work diligently regardless of scale. We actually prefer starting with small projects to build trust."
+            }
+        ]
     },
     "contact": {
         "heading": "Ready to make your way?",
         "subheading": "Whether you need AX consulting, a custom AI solution, or an FDE team, we are here to help.",
-        "buttonMobile": "Contact Us"
+        "showEmail": "Show Email Address",
+        "buttonMobile": "Contact Us",
+        "form": {
+            "divider": "or send a message",
+            "name": "Name",
+            "namePlaceholder": "John Doe",
+            "email": "Email",
+            "emailPlaceholder": "your@email.com",
+            "message": "Message",
+            "messagePlaceholder": "Tell us about your project...",
+            "submit": "Send Message",
+            "sending": "Sending...",
+            "success": "Message sent! We'll get back to you soon.",
+            "error": "Failed to send. Please try again later."
+        }
     },
     "footer": {
         "copyright": "WayMaker. All rights reserved."

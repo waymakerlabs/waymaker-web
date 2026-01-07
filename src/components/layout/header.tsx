@@ -49,8 +49,14 @@ export function Header() {
                     <span className="text-lg font-bold tracking-tight">WayMaker</span>
                 </Link>
                 <nav className="flex items-center gap-4">
-                    <Link href="#services" className="text-sm font-medium hover:text-primary transition-colors hidden sm:block">
+                    <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors hidden md:block">
+                        {t('about')}
+                    </Link>
+                    <Link href="#services" className="text-sm font-medium hover:text-primary transition-colors hidden md:block">
                         {t('services')}
+                    </Link>
+                    <Link href="#process" className="text-sm font-medium hover:text-primary transition-colors hidden md:block">
+                        {t('process')}
                     </Link>
                     <Link href="#contact">
                         <Button size="sm" variant={scrolled ? "default" : "outline"} className="rounded-full">
